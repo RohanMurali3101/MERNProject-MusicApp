@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const app = express();
-const userRoutes = require("./routes/userRoutes");
+const userRoutes = require("./Routes/userRoutes");
 const dbConnect = async () => {
   try {
     await mongoose.connect("mongodb://localhost:27017/MusicPlayer");
