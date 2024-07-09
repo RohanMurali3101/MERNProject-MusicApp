@@ -10,7 +10,7 @@ function SignUp() {
   const [password, setPassword] = useState();
   const handleSubmit = (event) => {
     let inputObj = {name,username,email,mobile,password};
-    let url = "http://localhost:4000/users/createUser";
+    let url = "https://mernproject-musicapp-backend.onrender.com/users/createUser";
     axios
       .post(url, inputObj)
       .then((res) => {

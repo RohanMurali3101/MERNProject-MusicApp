@@ -15,7 +15,7 @@ function View() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/users/getUsers")
+      .get("https://mernproject-musicapp-backend.onrender.com/users/getUsers")
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
@@ -27,7 +27,7 @@ function View() {
 
   const deleteData = (id) => {
     axios
-      .delete(`http://localhost:4000/users/deleteUser/${id}`)
+      .delete(`https://mernproject-musicapp-backend.onrender.com/users/deleteUser/${id}`)
       .then((res) => {
         console.log(res.data);
         if (res.status === 200) {
@@ -68,7 +68,7 @@ function View() {
 
   const handleUpdate = () => {
     axios
-      .put(`http://localhost:4000/users/updateUser/${editingUser._id}`, formData)
+      .put(`https://mernproject-musicapp-backend.onrender.com/users/updateUser/${editingUser._id}`, formData)
       .then((res) => {
         console.log(res.data);
         alert("User updated successfully");
