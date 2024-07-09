@@ -21,7 +21,11 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRoutes);
-app.listen(4000, () => {
-  dbConnect();
-  console.log("server started on port 4000");
-});
+const startServer = async () => {
+  await dbConnect();
+  app.listen(4000, () => {
+    console.log("Server started on port 4000");
+  });
+};
+
+startServer();
